@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Hero from "./_components/Hero";
+import { PopularCityList } from "./_components/PopularCityList";
 export default function Home() {
   return (
     // <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -62,8 +64,8 @@ export default function Home() {
     //   </main>
     // </div>
     <div>
-      <h2>Hello World!</h2>
-      <Button>Click it!</Button>
+      <Hero/>
+      <PopularCityList/>
     </div>
   );
 }

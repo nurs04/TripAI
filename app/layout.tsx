@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Provider from "./provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 
 export const metadata: Metadata = {
@@ -16,12 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body
         className={open_sans.className}
       >
-        {children}
+        <Provider>
+          {children}
+        </Provider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
